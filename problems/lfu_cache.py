@@ -12,17 +12,17 @@ class LFUCache:
     """
     Uses to datastructures.
         * cache is a dict: key -> node
-        * countbuckets: {count[int] -> OrderedDict {key: Node}}
+        * countbuckets: {count[int] -> OrderedDict {key: Node}}, for handling the LFU bookkeeping
 
     """
     def __init__(self, capacity: int):
         assert capacity >= 0
         self.capacity = capacity
+        self.minCount = 0
         self.cache = {}  # key: Node(val, count)
 
         self.countbuckets = defaultdict(OrderedDict) 
         # count: OrderedDict(key: Node(val, count))
-        self.minCount = 0
         
 
     def get(self, key: int) -> int:
