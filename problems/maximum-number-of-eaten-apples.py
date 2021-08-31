@@ -3,6 +3,9 @@
 from queue import PriorityQueue
 from heapq import heappush, heappop
 
+# heapq is not thread-safe (PriorityQueue is). heapq is faster.
+# PriorityQueue actually uses heapq under the hood
+
 class Solution:
     
     def eatenApples(self, apples: List[int], days: List[int]) -> int:
