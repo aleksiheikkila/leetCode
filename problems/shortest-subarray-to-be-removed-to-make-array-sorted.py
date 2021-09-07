@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted
 
+from typing import List
 class Solution:
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
         # Three possible cases

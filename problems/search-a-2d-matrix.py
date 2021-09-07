@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/search-a-2d-matrix
 
+from typing import List
 class Solution:
     
     
@@ -23,7 +24,7 @@ class Solution:
                 return True
 
         row, left, right = matrix[rowno_of_interest], 1, ncols - 1
-        # left, right should have the row num to search
+
         while left <= right:
             mid = left + (right - left) // 2
             
