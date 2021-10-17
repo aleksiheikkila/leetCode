@@ -19,7 +19,7 @@ class MinStack:
             self.min_val = min(self.min_val, val)
             self.stack.append((val, self.min_val))
         
-
+    # New comment
     def pop(self) -> None:
         self.stack.pop()                 
         self.min_val = None if len(self.stack) == 0 else self.top_minval()
