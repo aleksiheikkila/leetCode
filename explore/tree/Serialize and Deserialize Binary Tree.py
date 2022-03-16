@@ -77,7 +77,7 @@ class Codec:
 
                 lft = node.left.val if node.left else None
                 rgt = node.right.val if node.right else None
-                print("val: ",node.val, "  -  left:", lft, "  -  right:", rgt)
+                print("val: ", node.val, "\t - left:", lft, "\t - right:", rgt)
                 if node.left:
                     nodes.append(node.left)
                 if node.right:

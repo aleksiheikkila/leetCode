@@ -3,8 +3,8 @@
 class Solution:
     def countBinarySubstrings(self, s: str) -> int:
         """
-        count the number of contiguous zeros / ones (that is a block)
-        When the binary digit changes (block ends, the number is substrs is incremented 
+        count the number of contiguous zeros / ones (that's a block)
+        When the binary digit changes (block ends), the number is substrs is incremented 
         by the min of prev and current block length)
         """
         

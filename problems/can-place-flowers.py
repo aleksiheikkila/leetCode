@@ -18,11 +18,10 @@ class Solution:
         
         # proceed in greedy way
         for i in range(L):
-            if flowers[i] == 1:
-                continue
-        
-            # else free spot: is adjacents free too?
-            if (i == 0 or flowers[i-1] == 0) and (i == L-1 or flowers[i+1] == 0):
+            # free spot: are adjacents free too?
+            if (not flowers[i] 
+                    and (i == 0 or flowers[i-1] == 0) 
+                    and (i == L-1 or flowers[i+1] == 0)):
                 if n == 1:
                     return True
                 flowers[i] = 1

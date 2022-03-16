@@ -5,7 +5,12 @@ Dynamic programming
 
 let
 f(i,j) = minimum edit distance between word1[:i] and word2[:j]  (i,j not included)
-f(len(word1) = N1, len(word2) = N2) is what we need
+f(0,0) is the minumum distanc between '' and '' = 0
+f(1,1) is the minimum distance between e.g. 'h' and 's'
+
+
+f(len(word1) = N1 , len(word2) + 1 = N2 + 1) is what we need
+
 
 Relation:
 f(i,j) = minimum of the following:
@@ -27,7 +32,7 @@ class Solution:
         N2 = len(word2)
         
         # first row, i=0, so col values are j as per the base case
-        dp = list(range(N2 + 1))
+        dp = list(range(N2 + 1))   # [0, 1, 2, ..., len(word2)]
         # use two rows of the matrix, dp is the previous and new_dp is the next one
         
         for r, chr1 in enumerate(word1, 1):

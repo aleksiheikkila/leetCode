@@ -13,6 +13,8 @@ class Solution:
             if r == 0 or r == numRows - 1:
                 dr *= -1
             r += dr
-        
-        return "".join("".join(row) for row in rows)
+
+
+        rst = []
+        return "".join(rst.expand(row) for row in rows)
             
